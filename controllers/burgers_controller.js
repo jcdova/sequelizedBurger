@@ -1,12 +1,16 @@
+var path = require("path");
+var express = require("express");
 var router = express.Router();
+// var app = express();
 
-// Import the model (burger.js) to use its database functions. 
-var Burger = require("../models");
+// Import the model (burgers.js) to use its database functions. 
+// var Burger = require("../models");
+var db = require("../models/burgers.js");
 
 //selectAll
 router.get("/", function(req, res) {
   
-  Burger.findAll({}).then(function(data) {
+  db.Burger.findAll({}).then(function(data) {
     var hbsObject = {
       burgers: data
     };
@@ -18,7 +22,7 @@ router.get("/", function(req, res) {
 //insertOne
 router.post("/burgers", function(req, res) {
 
-  Burger.create({
+  db.Burger.create({
     burger_name: reg.body.burger_name,
     devoured: reg.body.devoured
   }).then(function(data) {
@@ -28,9 +32,9 @@ router.post("/burgers", function(req, res) {
 
 //updateOne
 router.put("/burgers/:id", function(req, res) {
-	var condition = "id = " + req.params.id;
+	// var condition = "id = " + req.params.id;
 
-	Burger.update(req.body,
+	db.Burger.update(req.body,
   {
     where: {
       id: req.params.id
