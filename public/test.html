@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+	<!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<title>Eat-Da-Burger</title>
+
+	</head>
+	<body>
+		<br>
+		
+<style media="screen">
+body  {background-color: rgb(147, 169, 212);}
+textarea {
+  padding-top: 10px;
+}
+
+form {text-align: center;}
+
+img {display: block;
+	margin-left: auto;
+	margin-right: auto;}
+/*button {background-color: green;
+		border-color: green;
+		color: white}*/
+#devour {margin-left: 400px;}
+	
+.left-display {
+	height: 50px;
+	width: 200px;
+	display: block;
+	background-color: white;
+	padding: 10px;
+	margin-left: 200px;
+}
+
+.right-display {
+	height: 50px;
+	width: 200px;
+	display: block;
+	background-color: yellow;
+	float: right;
+	position: absolute;
+}
+
+</style>
+
+<img src="./assets/img/burger.png" height="300px" width="300px">
+
+<h1 class="text-center">Eat-Da-Burger!</h1>
+<div class='col-md-8'>
+
+  	
+</div>
+
+
+<div class='col-md-4'>
+
+
+</div>
+
+<div class='col-md-12'>
+	<br>
+	<form action="/burgers/create" method="POST">
+		<textarea rows=2 cols=40 type="text" name="burgername"></textarea><br><br>
+		<button style="width: 180px; height: 60px; margin-bottom: 20px; background-color: #212074; font-size: 30px;" type="submit" class="btn btn-primary btn-lg">Submit</button>
+	</form>
+	<h3 class="text-center">Enter a burger you want to eat, then Click the Submit button.</h3><br>
+</div>
+
+
+
+	</body>
+</html>
