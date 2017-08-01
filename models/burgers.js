@@ -1,6 +1,5 @@
-
 module.exports = function(sequelize, DataTypes) {
-  var Burger = sequelize.define("burgers", {
+  var Burger = sequelize.define("Burger", {
     burger_name: {
       type: DataTypes.STRING,
       // AllowNull is a flag that restricts a burger name from being entered if it doesn't
@@ -8,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       // len is a validation that checks that our burger name is between 1 and 140 characters
       validate: {
-        len: [1, 140]
+         len: [1, 140]
       }
     },
     devoured: {
