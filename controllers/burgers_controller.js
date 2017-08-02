@@ -32,12 +32,12 @@ app.put("/burgers/:id", function(req, res) {
 	// var condition = "id = " + req.params.id;
 
 	db.Burger.update({
-      burger_name: req.body.burger_name,
+      // burger_name: req.body.burger_name,
       // devoured: req.body.devoured
-      devoured: req.body.devoured
+      devoured: true
     }, {
       where: {
-        id: req.body.id
+        id: req.body.burgerId
       }
   }).then(function(data) {
 		res.redirect("/")
@@ -45,3 +45,6 @@ app.put("/burgers/:id", function(req, res) {
 });
 
 }
+
+
+
